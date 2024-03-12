@@ -1,0 +1,401 @@
+/* Estilos globales */
+body {
+    background-image: url(https://assets.bedu.org/images/top-lenguajes-programacion-2021.jpg?w=1200);
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor del carrusel */
+.container-carousel {
+    position: relative;
+    width: 1000px; /* Ancho fijo del contenedor */
+    height: 400px; /* Alto fijo del contenedor */
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+/* Carruseles */
+.carruseles {
+    width: 1000%; /* Ancho del contenedor del carrusel, multiplicado por el número de elementos del carrusel */
+    height: 100%; /* Alto del contenedor del carrusel */
+    display: flex;
+}
+
+/* Secciones del carrusel */
+.slider-section {
+    width: calc(100% / 10); /* Ancho de cada sección del carrusel, dividido por el número de secciones */
+    height: 100%; /* Alto de cada sección del carrusel */
+}
+
+.slider-section img {
+    width: 100%; /* Ancho de la imagen dentro de cada sección */
+    height: 100%; /* Alto de la imagen dentro de cada sección */
+    object-fit: cover; /* Ajuste de la imagen para cubrir el contenedor */
+    border-radius: 15px;
+}
+
+/* Botones de navegación del carrusel */
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: black;
+    color: black;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+/* Menú */
+.Menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    background-color: #454646;
+}
+
+.Inicio {
+    margin-left: 35px;
+}
+
+.Lista {
+    display: flex;
+    margin-right: 50px;
+}
+
+li {
+    list-style: none;
+    margin-right: 35px;
+    justify-content: space-between;
+}
+
+.Perfil {
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 100px;
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: "Roboto", sans-serif;
+}
+
+.Barra {
+    background-color: #454646;
+}
+
+.menubar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+header {
+    margin-bottom: 100px;
+}
+
+/* Cajas de contenido */
+.caja1, .caja2, .caja3, .caja4, .caja5, .caja6 {
+    background-color: white;
+    width: calc(33.33% - 20px); /* Ancho de las cajas con un margen entre ellas */
+    height: 300px; /* Alto fijo de las cajas */
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 1em;
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja1:hover, .caja2:hover, .caja3:hover, .caja4:hover, .caja5:hover, .caja6:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra alrededor */
+}
+
+.caja1::after, .caja2::after, .caja3::after, .caja4::after, .caja5::after, .caja6::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.caja1:hover::after, .caja2:hover::after, .caja3:hover::after, .caja4:hover::after, .caja5:hover::after, .caja6:hover::after {
+    opacity: 1; /* Opacidad al pasar el mouse */
+}
+
+/* Contenedor principal */
+.cont {
+    display: flex;
+    background-color: #454646;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 2000px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Sección "Sobre Mí" */
+.AboutMe {
+    order: -1;
+    background-color: #454646;
+    font-size: 50px !important;
+    margin: 0;
+    border: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Sección de contacto */
+.Contacto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Contacto h1 {
+    color: white;
+    margin: 0;
+}
+
+.Contacto a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Contenedor general */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    clear: both;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.title {
+    color: #333;
+    text-align: center;
+}
+
+.Contacto {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Botones de contacto */
+.boton {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.boton:hover {
+    opacity: 0.8;
+}
+
+/* Estilos de los enlaces */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos de enlaces al hacer clic */
+a:active {
+    background-color: #22384b81;
+}
+
+
+
+/* Imagen de caja */
+.imagen-caja {
+    width: auto;
+    height: 100px;
+}
+
+/* Estilos para la sección de la foto */
+.foto {
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 560px;
+    float: left;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    margin-top: 20px;
+}
+
+.foto:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.foto:hover:before {
+    opacity: 1;
+}
+
+.foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Estilos para la sección "Sobre Mí" */
+.sobre-mi {
+    width: 65%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    float: right;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-mi:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los títulos */
+h1, h2, h3 {
+    color: black;
+}
+
+/* Estilos para el texto */
+p {
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #6865f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #97aef7;
+}
+
+
+.container1 {
+    clear: both; /* Evita que se superponga con otras secciones */
+    padding-top: 50px; /* Agrega espacio superior */
+    padding-bottom: 50px; /* Agrega espacio inferior */
+    text-align: center; /* Centra el contenido dentro del contenedor */
+    background-color: #333; /* Color de fondo oscuro */
+}
+
+/* Estilo para las filas dentro del contenedor */
+.container1 .row {
+    display: flex; /* Utiliza un modelo de caja flexible */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
+    justify-content: center; /* Centra horizontalmente los elementos dentro de la fila */
+}
+
+/* Estilo para las cajas de contenido dentro del contenedor */
+.container1 .box {
+    width: calc(25% - 20px); /* Establece el ancho de cada caja (el 25% del contenedor menos 20px de margen) */
+    height: 200px; /* Altura fija de las cajas */
+    margin: 10px; /* Margen entre las cajas */
+    background-color: #fff; /* Color de fondo de las cajas */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Utiliza un modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente el contenido dentro de la caja */
+    align-items: center; /* Centra verticalmente el contenido dentro de la caja */
+    text-align: center; /* Centra el texto dentro de la caja */
+    transition: transform 0.3s ease; /* Agrega una transición suave al hacer hover */
+}
+
+/* Efecto de escala al hacer hover sobre las cajas */
+.container1 .box:hover {
+    transform: scale(1.1); /* Escala la caja al 110% de su tamaño original al hacer hover */
+}
+
+/* Estilo para el texto dentro de las cajas */
+.container1 .box h2 {
+    margin: 0; /* Elimina el margen exterior del texto */
+    padding: 10px; /* Agrega espacio interno alrededor del texto */
+    font-size: 20px; /* Tamaño de fuente del texto */
+    color: #333; /* Color del texto */
+}
